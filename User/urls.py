@@ -19,6 +19,6 @@ from . import views
 from .views import UserCreate
 
 urlpatterns = [
-    path('create/' , UserCreate.as_view() , name = 'user_create_view'),
+    path('' , UserCreate.as_view() , name = 'user_create_view'),
     path('about/', views.about , name ='about'),
 ]

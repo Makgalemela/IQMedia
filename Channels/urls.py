@@ -31,9 +31,9 @@ from django.conf.urls import url
 urlpatterns = [
     # path('', include('IQDeviceStatus.urls')),
     path('status/', HomeView.as_view()),
-    path('', include('main.urls')),
+    path('main/', include('main.urls')),
 	path('login/', auth_views.LoginView.as_view(), name ='user_login'),
     path('logout/', auth_views.LogoutView.as_view(template_name ='users/logout.html'), name ='user_logout'),
-	path('user/', include('User.urls')),
+	path('', include('User.urls')),
     path('admin/', admin.site.urls),
 ]
