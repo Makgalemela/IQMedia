@@ -1,0 +1,52 @@
+{% load staticfiles %}
+<html>
+  <head>
+    <title>Notifier</title>
+  </head>
+  <body>
+    <h1>Notifier</h1>
+    <p>Notifications</p>
+    <ul id="notifylist"> User</ul>
+    <script>
+
+
+    var socket = new WebSocket('ws://' + window.location.host + '/ws/');
+     socket.onopen = function open() {
+        console.log('WebSockets connection created.');
+     };
+       socket.onmessage = function message(event) {
+          console.debug("WebSocket message received:", event);
+          var data = JSON.parse(event.data);
+          // NOTE: We escape JavaScript to prevent XSS attacks.
+              var username = encodeURI(data['username']);
+              var location = encodeURI(data['location']);
+              var information = username +" " +location;
+
+
+              console.log(username);
+              console.log(location);
+              document.getElementById("notifylist").innerHTML = information;
+
+              var node = document.createTextNode("This is new.");
+                para.appendChild(node);
+
+          };
+
+    // document.addEventListener('DOMContentLoaded', function() {
+    //   const webSocketBridge = new channels.WebSocketBridge();
+    //   const nl = document.querySelector("#notifylist");
+      
+    //   webSocketBridge.connect('/notifications/');
+    //   webSocketBridge.listen(function(action, stream) {
+    //     console.log("RESPONSE:", action);
+    //     if(action.event == "New User") {
+    //       var el = document.createElement("li");
+    //       el.innerHTML = `New user <b>${action.username}</b> has joined!`;
+    //       nl.appendChild(el);
+    //     }
+    //   })
+    //   document.ws = webSocketBridge; /* for debugging */
+    // })
+    </script>
+  </body>
+</html>
