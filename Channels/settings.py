@@ -29,7 +29,7 @@ ALLOWED_HOSTS = ['iqmediaapp.herokuapp.com' ,'127.0.0.1']
 
 
 # Application definition
-
+AUTH_USER_MODEL = 'User.User'
 INSTALLED_APPS = [
     'channels',
     'Echo.apps.EchoConfig',
