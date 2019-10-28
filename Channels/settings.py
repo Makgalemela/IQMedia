@@ -25,7 +25,7 @@ SECRET_KEY = 'ds3@)^$)_gm+dkta+acsi!txz03@35$g1mve*9wq$td-vwt^@*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["https://iqmediaapp.herokuapp.com/"]
+ALLOWED_HOSTS = ['iqmediaapp.herokuapp.com']
 
 
 # Application definition
