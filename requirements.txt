@@ -13,3 +13,4 @@ asgiref==3.2.3
 requests==2.22.0
 setuptools==28.8.0
 daphne==2.3.0
+pillow==17.5.0
