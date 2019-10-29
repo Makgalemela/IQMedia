@@ -1,1 +1,1 @@
-web: gunicorn -k channels.worker Channels:app
+web: daphne Channels.asgi:application --port $PORT --bind 0.0.0.0
