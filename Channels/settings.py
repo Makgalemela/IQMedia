@@ -76,7 +76,7 @@ TEMPLATES = [
     },
 ]
 
-# WSGI_APPLICATION = 'Channels.wsgi.application'
+WSGI_APPLICATION = 'Channels.wsgi.application'
 ASGI_APPLICATION = 'Channels.routing.application'
 
 
