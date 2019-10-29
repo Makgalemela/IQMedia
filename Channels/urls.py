@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from Echo.views import HomeView
+from Echo.views import HomeView, LocationView
 
 urlpatterns = [
    
@@ -31,6 +31,7 @@ from django.conf.urls import url
 urlpatterns = [
     # path('', include('IQDeviceStatus.urls')),
     path('status/', HomeView.as_view()),
+    path('Location/', LocationView.as_view()),
     path('main/', include('main.urls')),
 	path('login/', auth_views.LoginView.as_view(), name ='user_login'),
     path('logout/', auth_views.LogoutView.as_view(template_name ='users/logout.html'), name ='user_logout'),
