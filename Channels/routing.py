@@ -4,6 +4,6 @@ from Echo.consumers import NoseyConsumer
 
 application = ProtocolTypeRouter({
     "websocket": URLRouter([
-        path('ws/', NoseyConsumer),
+        path('', NoseyConsumer),
     ])
 })
