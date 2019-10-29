@@ -10,7 +10,7 @@
     <script>
 
 
-    var socket = new WebSocket('wss://' + window.location.host + '/ws/');
+    var socket = new WebSocket('ws://' + window.location.host + '/ws/');
      socket.onopen = function open() {
         console.log('WebSockets connection created.');
      };
