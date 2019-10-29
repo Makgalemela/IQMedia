@@ -9,8 +9,8 @@
     <ul id="notifylist"> User</ul>
     <script>
 
-
-    var socket = new WebSocket('wss://' + window.location.host + '/ws/');
+    var ws_scheme = window.location.protocol == "https:" ? "wss" : "ws";
+    var socket = new WebSocket(ws_scheme + '://' + window.location.host + '/ws/');
      socket.onopen = function open() {
         console.log('WebSockets connection created.');
      };
