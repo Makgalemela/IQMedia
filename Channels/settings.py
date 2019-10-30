@@ -140,7 +140,7 @@ CHANNEL_LAYERS = {
 
 LOGIN_REDIRECT_URL = "/about"
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
-LOGIN_REDIRECT_URL ='/'
+# LOGIN_REDIRECT_URL ='/'
 LOGIN_URL ='user_login'
 
 # Heroku: Update database configuration from $DATABASE_URL.
