@@ -1,3 +1,3 @@
 web: gunicorn Channels.wsgi --log-file -
-web: daphne Channels.asgi:channel_layer --port $PORT --bind 0.0.0.0 -v2
+web: daphne -p 8001 Channels.asgi:application
 worker: python manage.py runworker channels -v2
