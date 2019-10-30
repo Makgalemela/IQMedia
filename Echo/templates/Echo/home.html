@@ -10,7 +10,7 @@
     <ul id="notifylist"> User</ul>
     <script>
     "use strict";
-    const WebSocket = require('ws');
+    
     const ws_scheme = window.location.protocol == 'https:' ? 'wss' : 'ws';
     const socket = new WebSocket(ws_scheme + '://' + window.location.host + '/ws/');
      socket.onopen = function open() {
