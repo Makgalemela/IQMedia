@@ -5,11 +5,9 @@ defined in the ASGI_APPLICATION setting.
 
 import os
 import django
-<<<<<<< HEAD
 
-=======
->>>>>>> 2b4f49941ce55b495a0941715404e6fd6dc75bf0
 from channels.routing import get_default_application
+
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "Channels.settings")
 import channels.layers
 channel_layer = channels.layers.get_channel_layer()
