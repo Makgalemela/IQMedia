@@ -5,6 +5,6 @@ from django.conf.urls import url
 
 application = ProtocolTypeRouter({
     "websocket": URLRouter([
-        url(r'^ws/', NoseyConsumer),
+        path('ws/', NoseyConsumer.connect),
     ])
 })
