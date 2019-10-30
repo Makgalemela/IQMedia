@@ -138,7 +138,7 @@ CHANNEL_LAYERS = {
     },
 }
 
-LOGIN_REDIRECT_URL = "users/temp.html"
+LOGIN_REDIRECT_URL = "/about"
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 LOGIN_REDIRECT_URL ='/'
 LOGIN_URL ='user_login'
