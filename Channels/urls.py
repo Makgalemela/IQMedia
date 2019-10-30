@@ -34,7 +34,7 @@ urlpatterns = [
     path('Location/', LocationView.as_view()),
     path('main/', include('main.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
-	path('login/', auth_views.LoginView.as_view(template_name ='users/registration/login.html'), name ='user_login'),
+	path('login/', auth_views.LoginView.as_view(template_name ='users/login.html'), name ='user_login'),
     path('logout/', auth_views.LogoutView.as_view(template_name ='users/logout.html'), name ='user_logout'),
 	path('', include('User.urls')),
     path('admin/', admin.site.urls),
