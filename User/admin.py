@@ -8,7 +8,7 @@ from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 
 
 from .forms import UserAdminCreationForm, UserAdminChangeForm
-from .models import User
+from .models import User , Profile
 
 class UserAdmin(BaseUserAdmin):
     # The forms to add and change user instances
@@ -38,13 +38,12 @@ class UserAdmin(BaseUserAdmin):
     filter_horizontal = ()
 
 
-admin.site.register(User, UserAdmin)
+# admin.site.register(User, UserAdmin)
+admin.site.register(Profile)
 
 
 
 # Remove Group Model from admin. We're not using it.
-admin.site.unregister(Group)
-
 admin.site.site_header = "IQ Media"
 admin.site.site_title = "IQ Media Portal"
 admin.site.index_title = "Welcome to IQ Media Portal"

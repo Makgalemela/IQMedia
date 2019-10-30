@@ -1,5 +1,5 @@
 
-{% extends "users/base.html" %}
+{% extends "main/base.html" %}
 {% load crispy_forms_tags %}
 {% block content %}
 
@@ -16,25 +16,22 @@
     {% endif %}
 {% endif %}
 
-<form method="post">
-{% csrf_token %}
-<table>
-<tr>
-    <td>{{ form.username.label_tag }}</td>
-    <td>{{ form.username }}</td>
-</tr>
-<tr>
-    <td>{{ form.password.label_tag }}</td>
-    <td>{{ form.password }}</td>
-</tr>
-</table>
-
-{{form.errors}}
-<input type="submit" value="login">
-<input type="hidden" name="next" value="{{ next }}">
-</form>
-
-{# Assumes you setup the password_reset view in your URLconf #}
-<p><a href="#">Lost password?</a></p>
-
+        <div class="content-section">
+            <form method="POST">
+                {% csrf_token %}
+                <fieldset class="form-group">
+                    <legend class="border-bottom mb-4">Login</legend>
+                    {{form|crispy}}
+                </fieldset>
+                <div class="form-group">
+                    <button class="btn btn-outline-info" type ="submit">Login </button>
+                </div>
+            </form>
+            <div class="border-top pt-3">
+                <small class="text-muted">
+                    Need An Account? <a class="ml-2" href="{% url 'register_client' %}">Sign Up</a>
+                </small>
+            </div>
+        </div>
+    
 {% endblock %}

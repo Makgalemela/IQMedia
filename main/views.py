@@ -6,4 +6,4 @@ from User.models import User
 
 class IndexView(ListView):
 	model = User
-	template_name = 'users/base.html'
+	template_name = 'main/base.html'
